@@ -7,6 +7,11 @@ import { ComicComponent } from './components/comic/comic.component';
 import { LibreriaComponent } from './components/libreria/libreria.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ServiceComics } from './services/service.comics';
+import { HttpClientModule } from '@angular/common/http';
+import { ServicePersonas } from './services/service.personas';
+import { PersonasComponent } from './components/personas/personas.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,16 @@ import { HomeComponent } from './components/home/home.component';
     ComicComponent,
     LibreriaComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceComics, ServicePersonas],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

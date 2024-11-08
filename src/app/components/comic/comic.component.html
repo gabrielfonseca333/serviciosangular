@@ -1,1 +1,8 @@
-<p>comic works!</p>
+<div class="card" style="padding: 10px;">
+  <h2>{{comic.nombre}}</h2>
+  <p>{{comic.descripcion}}</p>
+  <hr>
+  <img class="img-fluid" src={{comic.imagen}}>
+  <br>
+  <button class="btn btn-outline-warning" (click)="marcarFavoritoComic()" >⭐Favorito</button>
+</div>

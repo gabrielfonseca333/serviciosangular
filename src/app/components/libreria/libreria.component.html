@@ -1,8 +1,22 @@
-<div class="card col-6 mx-auto" style="text-align: center;">
+<div class="card col-8 mx-auto" style="text-align: center; padding: 20px;">
 
   <h1 class="h1">Libreria de Comics</h1>
-  <div *ngFor="let comic in comics">
-    <app-comic></app-comic>
+
+  <form #comic="ngForm" style="text-align: left;">
+    <label>Nombre: </label>
+    <input class="form-control" type="text" #cajanombre name="cajanombre">
+    <label>Descripcion: </label>
+    <input class="form-control" type="text" #cajadescripcion name="cajadescripcion">
+    <label>Imagen: </label>
+    <input class="form-control" type="text" #cajaimagen name="cajaimagen">
+    <button class="btn btn-primary" (click)="nuevoComic()">
+        Añadir
+    </button>
+</form>
+
+  
+  <div *ngFor="let comic of comics" style="padding: 20px;">
+    <app-comic [comic]="comic" (marcarFavoritoLibreria)="marcarFavorito($event)" ></app-comic>
   </div>
 
 </div>

@@ -1,0 +1,11 @@
+<div class="card col-6 mx-auto" style="padding: 10px;">
+  <ul class="list-group">
+    <li *ngFor="let persona of personas" class="list-group-item">
+      <div>
+        <h2 class="h2">{{persona.idPersona}} {{persona.Nombre}}</h2>
+        <p><b>Email: </b>{{persona.Email}}</p>
+        <p><b>Edad: </b>{{persona.Edad}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
