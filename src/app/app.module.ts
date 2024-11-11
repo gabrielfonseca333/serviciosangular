@@ -12,6 +12,11 @@ import { ServiceComics } from './services/service.comics';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicePersonas } from './services/service.personas';
 import { PersonasComponent } from './components/personas/personas.component';
+import { ServiceCoches } from './services/sevice.coches';
+import { CochesComponent } from './components/coches/coches.component';
+import { PlantillafuncionsimpleComponent } from './components/plantillafuncionsimple/plantillafuncionsimple.component';
+import { ServicePlantilla } from './services/service.plantilla';
+import { PlantillafuncionmultipleComponent } from './components/plantillafuncionmultiple/plantillafuncionmultiple.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { PersonasComponent } from './components/personas/personas.component';
     LibreriaComponent,
     MenuComponent,
     HomeComponent,
-    PersonasComponent
+    PersonasComponent,
+    CochesComponent,
+    PlantillafuncionsimpleComponent,
+    PlantillafuncionmultipleComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,7 @@ import { PersonasComponent } from './components/personas/personas.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ServiceComics, ServicePersonas],
+  providers: [ServiceComics, ServicePersonas, ServiceCoches, ServicePlantilla],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,7 +14,7 @@ export class PersonasComponent {
   constructor(private _service: ServicePersonas){  }
 
 ngOnInit():void{
-  this._service.getPersonas().subscribe(response=>{
+  this._service.getPersonasPromesa().then(response=>{
     console.log("leyendo")
     this.personas = response
   })

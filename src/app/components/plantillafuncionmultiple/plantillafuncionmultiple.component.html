@@ -1,0 +1,39 @@
+<div class="mx-auto col-8">
+  <h1>Plantilla funciones Multiples</h1>
+  <div class="card" style="padding: 10px; border: 1px solid gray; box-shadow: 1px 1px 10px; background-color: rgb(14, 11, 56);">
+    <select #selectfunciones (change)="mostrarPlantilla()" multiple>
+      <option *ngFor="let funcion of funciones" value={{funcion}} >{{funcion}}</option>
+    </select>
+  </div>
+  <br>
+
+  <!-- mostrar plantilla -->
+  <div *ngIf="plantilla != null" style="padding: 10px;" class="col8">
+    <table class="table table-bordered table-dark table-hover-">
+      <thead>
+        <tr>
+          <th>idEmpleado</th>
+          <th>idHospital</th>
+          <th>idSala</th>
+          <th>Apellido</th>
+          <th>Funcion</th>
+          <th>Turno</th>
+          <th>Salario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of plantilla">
+          <td> {{empleado.idEmpleado}}</td>
+          <td> {{empleado.idHospital}}</td>
+          <td> {{empleado.idSala}}</td>
+          <td><b>{{empleado.apellido}}</b> </td>
+          <td> {{empleado.funcion}}</td>
+          <td> {{empleado.turno}}</td>
+          <td> {{empleado.salario}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
